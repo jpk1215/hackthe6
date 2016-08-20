@@ -3,6 +3,9 @@ var path = require('path');
 var app = express();
 var pizzapi = require('pizzapi');
 var nodemailer = require('nodemailer');
+var NodeGeocoder = require('node-geocoder');
+
+var geocoder = NodeGeocoder({provider:'google'});
 
 app.use(express.static('public'));
 
@@ -12,6 +15,20 @@ app.get('/', function(req, res) {
 });
 
 app.post('/order', function(req, res) {
+
+	// THIS IS WHERE WE WOULD LOOK UP THE NEAREST DOMINOS IF THIS WHAT IN THE USA
+
+	// geocoder.reverse({lat:req.query.lat, lon:req.query.long}, function(err, location) {
+	// 	console.log(location)
+	// 	pizzapi.Util.findNearbyStores(
+	// 		'16801',
+	// 		'Delivery',
+	// 		function(storeData){
+	// 			console.log(storeData);
+	// 		}
+	// 	);
+	// });
+
 	var transporter = nodemailer.createTransport('smtps://EXTREMEDEWD%40gmail.com:dothedew@smtp.gmail.com');
 	var mailOptions = {
 		from: '"MR DEW" <EXTREMEDEWD@gmail.com>', // sender address
