@@ -13,17 +13,15 @@ app.get('/', function(req, res) {
 
 app.post('/order', function(req, res) {
 	var transporter = nodemailer.createTransport('smtps://EXTREMEDEWD%40gmail.com:dothedew@smtp.gmail.com');
-
-	// setup e-mail data with unicode symbols
 	var mailOptions = {
 		from: '"MR DEW" <EXTREMEDEWD@gmail.com>', // sender address
 		to: 'jpk1215@gmail.com', // list of receivers
 		subject: "DUDE YOU'RE GETTING A DEW", // Subject line
 		text: "AN ICE COLD DEW IS BEING BREWED FOR YOU RIGHT NOW. SIT BACK, RELAX, AND AWAIT THAT ICEY COLD RIVER OF LIQUID GOLD THAT IS THE DEW. CONGRATULATIONS, YOU\'VE EARNED IT." , // plaintext body
-		html: '<b>AN ICE COLD DEW IS BEING BREWED FOR YOU RIGHT NOW. SIT BACK, RELAX, AND AWAIT THAT ICEY COLD RIVER OF LIQUID GOLD THAT IS THE DEW. CONGRATULATIONS, YOU\'VE EARNED IT.</b>' // html body
+		html: '<b>AN ICE COLD DEW IS BEING BREWED FOR YOU RIGHT NOW. SIT BACK, RELAX, AND AWAIT THAT ICEY COLD RIVER OF LIQUID GOLD THAT IS THE DEW. CONGRATULATIONS, YOU\'VE EARNED IT.</b>'+
+		// '<img width="600" src=' + mapUrl + ' alt="Destiny">' // html body
+		'<img width="600" src=' + mapUrlMaker(req.query.lat, req.query.long) + ' alt="Destiny">' // html body
 	};
-
-	// send mail with defined transport object
 	transporter.sendMail(mailOptions, function(error, info){
 		if(error){
 			return console.log(error);
@@ -37,3 +35,7 @@ app.post('/order', function(req, res) {
 app.listen(3000, function() {});
 
 
+
+function mapUrlMaker(lat, long) {
+	return 'http://maps.googleapis.com/maps/api/staticmap?center=loc:' + lat + '+' + long +'&zoom=13&scale=false&size=600x300&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C' + lat + '+' + long
+}

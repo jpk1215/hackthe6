@@ -23,9 +23,11 @@ $(document).ready(
             $(this).toggleClass('strike').fadeOut('slow').remove();
             if(list.childElementCount === 0) {
                 initialized = false;
-                jQuery.post( '/order', {dew: true}, function(data){
-                    console.log('destiny', data)
-                })
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    jQuery.post( '/order?lat='+position.coords.latitude + "&long=" + position.coords.longitude, {}, function(data){
+                        console.log('destiny', data)
+                    })
+                });
             }
         });
 
