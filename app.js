@@ -3,6 +3,8 @@ var path = require('path');
 var app = express();
 var pizzapi = require('pizzapi');
 
+app.use(express.static('public'));
+
 app.get('/', function(req, res) {
 	var view_path = path.join(__dirname, 'views/home.html');
 	res.sendFile(view_path);
