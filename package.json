@@ -6,6 +6,7 @@
   "dependencies": {
     "dominos": "^2.0.1",
     "express": "^4.14.0",
+    "nodemailer": "^2.5.0",
     "pizzapi": "0.0.8"
   },
   "devDependencies": {},
