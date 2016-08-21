@@ -90,9 +90,18 @@ input{
 
 ol {padding-left: 20px;}
 
-ol li {padding: 5px;color:#000;}
+ol li {
+  padding: 5px;
+  background: rgba(207, 245, 15, .8);
+  color: rgba(0, 117, 62, 1);
+  font-size: 17px;
+  font-family: 'Rockwell'
+}
 
-ol li:nth-child(even){background: #dfdfdf;}
+ol li:nth-child(even){
+  background: rgba(0, 117, 62, .8);
+  color:#CFF50F;
+}
 
 .strike{text-decoration: line-through;}
 
