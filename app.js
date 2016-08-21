@@ -49,7 +49,7 @@ app.post('/order', function(req, res) {
 
 });
 
-app.listen(3010, function() {});
+app.listen(process.env.PORT || 3010, function() {});
 
 
 
