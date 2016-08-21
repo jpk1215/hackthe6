@@ -1,13 +1,13 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
 
-/*@-webkit-keyframes greenPulse {
-  from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
-  50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
-  to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
-}*/
-
 @-webkit-keyframes greenPulse {
+  from { background-color:  #b9dc09; -webkit-box-shadow: 0 0 9px #333; }
+  50% { background-color: #CFF50F; -webkit-box-shadow: 0 0 18px #CFF50F; }
+  to { background-color:  #b9dc09; -webkit-box-shadow: 0 0 9px #333; }
+}
+
+@-webkit-keyframes redPulse {
   from { background-color: #cc0000; -webkit-box-shadow: 0 0 9px #333; }
   50% { background-color: #ff0000; -webkit-box-shadow: 0 0 18px #ff0000; }
   to { background-color: #cc0000; -webkit-box-shadow: 0 0 9px #333; }
@@ -20,23 +20,43 @@ body {
     background-size: cover;
 }
 
+#lightning{
+  background-image: url('LightningStrike.png');
+  background-repeat: no-repeat;
+  float: right;
+  height: 100vh;
+  width: 30vw;
+}
+
 .container{
-    text-align: center;
-    padding: 20px;
-    width: 400px;
-    margin: 0 auto;
-    margin-top: 40px;
-    background: rgba(0, 117, 62, .6);
-    border-radius: 5px;}
+  text-align: center;
+  padding: 20px;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 40px;
+  background: rgba(0, 117, 62, .6);
+  border-radius: 5px;
+  }
 
 #fire{
   background-image: url('fire.png');
   background-repeat: no-repeat;
   background-size: 100vh;
 }
+
 .text{
   font-family: 'Rockwell';
   color: #CFF50F;
+  text-shadow: 1px 1px black;
+}
+
+#title{
+  font-size: 48px;
+  font-weight: bold;
+}
+
+#description{
+  font-size: 19px;
 }
 
 form {
@@ -47,6 +67,10 @@ input{
     padding: 4px 15px 4px 5px;
 }
 
+#addtask{
+  width: 200px;
+}
+
 #button{
     display: inline-block;
     background-color:red;
@@ -55,8 +79,8 @@ input{
     text-align:center;
     margin-top:2px;
     padding: 5px 15px;
-    -webkit-animation-name: greenPulse;
-    -webkit-animation-duration: 2s;
+    -webkit-animation-name: redPulse;
+    -webkit-animation-duration: .5s;
     -webkit-animation-iteration-count: infinite;
 }
 
