@@ -1,11 +1,11 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
 
-@-webkit-keyframes greenPulse {
+/*@-webkit-keyframes greenPulse {
   from { background-color:  #b9dc09; -webkit-box-shadow: 0 0 9px #333; }
   50% { background-color: #CFF50F; -webkit-box-shadow: 0 0 18px #CFF50F; }
   to { background-color:  #b9dc09; -webkit-box-shadow: 0 0 9px #333; }
-}
+}*/
 
 @-webkit-keyframes redPulse {
   from { background-color: #cc0000; -webkit-box-shadow: 0 0 9px #333; }
