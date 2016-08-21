@@ -43,6 +43,6 @@ $(document).ready(
 function successView() {
 	$("#fire").remove();
 	$("#lightning").remove();;
-	var success = '<img style="margin-left: 300px;" src="success.gif" />'+'<h1 style="text-align:center;color:#ff0000;font-weight:bolder;font-size:80px;font-family:\'Impact\'">WE ARE SENDING A DEW TO YOUR LOCATION</h1>';
+	var success = '<img style="margin-left: 300px;" src="success.gif" />'+'<h1 style="text-align:center;color:#ff0000;line-height:1;font-weight:bolder;font-size:80px;font-family:\'Impact\'">WE ARE SENDING A DEW TO YOUR LOCATION</h1>';
 	$("body").append(success);
 }
