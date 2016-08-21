@@ -1,18 +1,43 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
 
+/*@-webkit-keyframes greenPulse {
+  from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+  50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+  to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+}*/
+
+@-webkit-keyframes greenPulse {
+  from { background-color: #cc0000; -webkit-box-shadow: 0 0 9px #333; }
+  50% { background-color: #ff0000; -webkit-box-shadow: 0 0 18px #ff0000; }
+  to { background-color: #cc0000; -webkit-box-shadow: 0 0 9px #333; }
+}
+
 body {
     font: normal normal 13px/16px "Open Sans", sans-serif;
-    background: #ccc;
+    background-image: url('dothedew.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container{
+    text-align: center;
     padding: 20px;
-    width: 300px;
+    width: 400px;
     margin: 0 auto;
     margin-top: 40px;
-    background: white;
+    background: rgba(0, 117, 62, .6);
     border-radius: 5px;}
+
+#fire{
+  background-image: url('fire.png');
+  background-repeat: no-repeat;
+  background-size: 100vh;
+}
+.text{
+  font-family: 'Rockwell';
+  color: #CFF50F;
+}
 
 form {
     display: inline-block;
@@ -24,12 +49,15 @@ input{
 
 #button{
     display: inline-block;
-    background-color:#fc999b;
+    background-color:red;
     color:#ffffff;
     border-radius: 5px;
     text-align:center;
     margin-top:2px;
     padding: 5px 15px;
+    -webkit-animation-name: greenPulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
 }
 
 #button:hover{
