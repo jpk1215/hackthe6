@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>To Dew</title>
-
-</head>
-<body>
   <head>
-      <link rel="stylesheet" type="text/css" href="./client.css"/>
+    <meta charset="UTF-8">
+      <title>To Dew</title>
+        <link rel="stylesheet" type="text/css" href="./client.css"/>
   </head>
   <body>
+    <audio src="extremeDew.mp3" autoplay></audio>
 
-<audio src="extremeDew.mp3" autoplay></audio>
+    <div id="lightning"></div>
+    <div class="container", id="fire">
+      <p class="text", id="title">TO DEW:</p>
+      <p class="text", id="description"><em>Achieve your destiny by slamming an ice cold <span style="color:red">Mountain Dew</span> once the day's tasks are done</em></p>
 
-<div id="lightning"></div>
-<div class="container", id="fire">
-  <p class="text", id="title">TO DEW:</p>
-  <p class="text", id="description"><em>Achieve your destiny by slamming an ice cold <span style="color:red">Mountain Dew</span> once the day's tasks are done</em></p>
+      <form name="toDoList">
+          <input type="text" name="ListItem"/ id="addtask">
+      </form>
 
-  <form name="toDoList">
-      <input type="text" name="ListItem"/ id="addtask">
-  </form>
-
-  <div id="button">Add</div>
-  <br/>
-  <ol></ol>
-</div>
-  <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
-  <script src="./client.js"></script>
+      <div id="button">Add</div>
+      <br/>
+      <ol></ol>
+    </div>
+      <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+      <script src="./client.js"></script>
   </body>
 </html>
