@@ -43,6 +43,6 @@ $(document).ready(
 function successView() {
 	$("#fire").remove();
 	$("#lightning").remove();;
-	var success = '<img align="middle"" src="success.gif" />'
-	$("body").append(success);	
+	var success = '<img style="margin-left: 200px;" src="success.gif" />'
+	$("body").append(success);
 }
