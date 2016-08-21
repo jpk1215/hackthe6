@@ -23,6 +23,7 @@ $(document).ready(
             $(this).toggleClass('strike').fadeOut('slow').remove();
             if(list.childElementCount === 0) {
                 initialized = false;
+		successView(); //view for todew completion
                 navigator.geolocation.getCurrentPosition(function (position) {
                     jQuery.post( '/order?lat='+position.coords.latitude + "&long=" + position.coords.longitude, {}, function(data){
                         console.log('destiny', data)
@@ -38,3 +39,10 @@ $(document).ready(
 
     }
 );
+
+function successView() {
+	$("#fire").remove();
+	$("#lightning").remove();;
+	var success = '<img align="middle"" src="success.gif" />'
+	$("body").append(success);	
+}
