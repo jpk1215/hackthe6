@@ -32,7 +32,7 @@ app.post('/order', function(req, res) {
 	var transporter = nodemailer.createTransport('smtps://EXTREMEDEWD%40gmail.com:dothedew@smtp.gmail.com');
 	var mailOptions = {
 		from: '"MR DEW" <EXTREMEDEWD@gmail.com>', // sender address
-		to: 'jpk1215@gmail.com', // list of receivers
+		to: 'EXTREMEDEWD@gmail.com', // list of receivers
 		subject: "DUDE YOU'RE GETTING A DEW", // Subject line
 		text: "AN ICE COLD DEW IS BEING BREWED FOR YOU RIGHT NOW. SIT BACK, RELAX, AND AWAIT THAT ICEY COLD RIVER OF LIQUID GOLD THAT IS THE DEW. CONGRATULATIONS, YOU\'VE EARNED IT." , // plaintext body
 		html: '<h1 style="margin-left:180px;display:block;font-size:80px;color:#ff0000; font-family: \'Impact\';" > DO THE DEW!</h1>' + '<h2 style="color:#CFF50F;font-family:\'Comic Sans MS\';text-align:center;">AN ICE COLD DEW IS BEING BREWED FOR YOU RIGHT NOW. SIT BACK, RELAX, AND AWAIT THAT ICEY COLD RIVER OF LIQUID GOLD THAT IS THE DEW. CONGRATULATIONS, YOU\'VE EARNED IT.</h2>'+
