@@ -35,16 +35,16 @@ app.post('/order', function(req, res) {
 		to: 'jpk1215@gmail.com', // list of receivers
 		subject: "DUDE YOU'RE GETTING A DEW", // Subject line
 		text: "AN ICE COLD DEW IS BEING BREWED FOR YOU RIGHT NOW. SIT BACK, RELAX, AND AWAIT THAT ICEY COLD RIVER OF LIQUID GOLD THAT IS THE DEW. CONGRATULATIONS, YOU\'VE EARNED IT." , // plaintext body
-		html: '<b>AN ICE COLD DEW IS BEING BREWED FOR YOU RIGHT NOW. SIT BACK, RELAX, AND AWAIT THAT ICEY COLD RIVER OF LIQUID GOLD THAT IS THE DEW. CONGRATULATIONS, YOU\'VE EARNED IT.</b>'+
+		html: '<h1 style="margin-left:180px;display:block;font-size:80px;color:#ff0000; font-family: \'Impact\';" > DO THE DEW!</h1>' + '<h2 style="color:#CFF50F;font-family:\'Comic Sans MS\';text-align:center;">AN ICE COLD DEW IS BEING BREWED FOR YOU RIGHT NOW. SIT BACK, RELAX, AND AWAIT THAT ICEY COLD RIVER OF LIQUID GOLD THAT IS THE DEW. CONGRATULATIONS, YOU\'VE EARNED IT.</h2>'+
 		// '<img width="600" src=' + mapUrl + ' alt="Destiny">' // html body
-		'<img width="600" src=' + mapUrlMaker(req.query.lat, req.query.long) + ' alt="Destiny">' // html body
+		'<img style="margin-left:100px;" width="600" src=' + mapUrlMaker(req.query.lat, req.query.long) + ' alt="Destiny">' // html body
 	};
 	transporter.sendMail(mailOptions, function(error, info){
 		if(error){
 			return console.log(error);
 		}
 		console.log('Message sent: ' + info.response);
-		res.send(200)
+		res.sendStatus(200)
 	});
 
 });
